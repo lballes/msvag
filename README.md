@@ -56,6 +56,6 @@ If you have any questions or suggestions regarding this implementation, please o
 If you use (M-)SVAG for your research, please cite the [paper][1].
 
 
-[1]: TODO
+[1]: https://arxiv.org/abs/1705.07774
 
 

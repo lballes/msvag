@@ -6,7 +6,7 @@ from ``tf.train.Optimizer`` and can be used as direct drop-in replacement for
 TensorFlow's built-in optimizers.
 
 [1]: Lukas Balles and Philipp Hennig. Dissecting Adam: The Sign, Magnitude and
-Variance of Stochastic Gradients. (url)
+Variance of Stochastic Gradients. (https://arxiv.org/abs/1705.07774)
 """
 
 import tensorflow as tf
@@ -24,7 +24,7 @@ class MSVAGOptimizer(tf.train.Optimizer):
       (m**2/(m**2 + rho*s)) * m
   
   [1]: Lukas Balles and Philipp Hennig. Dissecting Adam: The Sign, Magnitude and
-  Variance of Stochastic Gradients. (url)
+  Variance of Stochastic Gradients. (https://arxiv.org/abs/1705.07774)
   """
   
   def __init__(self,
@@ -141,7 +141,7 @@ class SVAGOptimizer(tf.train.Optimizer):
   where ``g`` is the local stochastic gradient.
   
   [1]: Lukas Balles and Philipp Hennig. Dissecting Adam: The Sign, Magnitude and
-  Variance of Stochastic Gradients. (url)
+  Variance of Stochastic Gradients. (https://arxiv.org/abs/1705.07774)
   """
   
   def __init__(self,

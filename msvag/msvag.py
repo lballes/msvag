@@ -79,8 +79,10 @@ class MSVAGOptimizer(tf.train.Optimizer):
     # Add update operations for slot variables
     mt = self.get_slot(var, "m_tilde")
     vt = self.get_slot(var, "v_tilde")
-    mt_update = mt.assign(self._beta_t*mt+(1.0-self._beta_t)*grad) 
-    vt_update = vt.assign(self._beta_t*vt+(1.0-self._beta_t)*tf.square(grad))
+    mt_update = mt.assign(self._beta_t*mt+(1.0-self._beta_t)*grad,
+                          use_locking=self._use_locking) 
+    vt_update = vt.assign(self._beta_t*vt+(1.0-self._beta_t)*tf.square(grad),
+                          use_locking=self._use_locking)
     
     with tf.control_dependencies([mt_update, vt_update]):
       # initialization-bias-corrected moving averages
@@ -196,8 +198,10 @@ class SVAGOptimizer(tf.train.Optimizer):
     # Add update operations for slot variables
     mt = self.get_slot(var, "m_tilde")
     vt = self.get_slot(var, "v_tilde")
-    mt_update = mt.assign(self._beta_t*mt+(1.0-self._beta_t)*grad) 
-    vt_update = vt.assign(self._beta_t*vt+(1.0-self._beta_t)*tf.square(grad))
+    mt_update = mt.assign(self._beta_t*mt+(1.0-self._beta_t)*grad,
+                          use_locking=self._use_locking) 
+    vt_update = vt.assign(self._beta_t*vt+(1.0-self._beta_t)*tf.square(grad),
+                          use_locking=self._use_locking)
     
     with tf.control_dependencies([mt_update, vt_update]):
       # initialization-bias-corrected moving averages

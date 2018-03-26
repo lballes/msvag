@@ -49,7 +49,7 @@ and update
 
 ## Feedback
 
-If you have any questions or suggestions regarding this implementation, please open an issue. Apart from that, we welcome any feedback regarding the performance of (M-)SVAG on your training problems (mail to lballes@tue.mpg.de).
+If you have any questions or suggestions regarding this implementation, please open an issue in [lballes/msvag](https://github.com/lballes/msvag). Apart from that, we welcome any feedback regarding the performance of (M-)SVAG on your training problems (mail to lballes@tue.mpg.de).
 
 ## Citation
 

@@ -2,13 +2,16 @@
 
 This is a [TensorFlow](https://www.tensorflow.org/) implementation of the M-SVAG and SVAG optimization algorithms described in the paper [Dissecting Adam: The Sign, Magnitude and Variance of Stochastic Gradients][1]
 
+**Attention:**
+``MSVAGOptimzier`` and ``SVAGOptimizer`` are now using tensorflow's new internal optimizer API for non-slot variables (introduced in the 1.6 release of tensorflow). This makes the code incompatible with tensorflow <1.6. Commit f4facee is the latest one that is compatible with tensorflow <1.6.
+
 ## Installation
 
 Install via
 
     pip install git+https://github.com/lballes/msvag.git
 
-``msvag`` requires a TensorFlow installation (the code has been tested for versions 1.4 and higher), but this is *not* currently enforced in the ``setup.py`` to allow for either the CPU or the GPU version.
+``msvag`` requires a TensorFlow installation (the current code has been tested for realeases 1.6--1.8), but this is *not* currently enforced in the ``setup.py`` to allow for either the CPU or the GPU version.
 
 ## Usage
 
